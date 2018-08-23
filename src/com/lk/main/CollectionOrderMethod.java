@@ -3,7 +3,6 @@ package com.lk.main;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -51,7 +50,7 @@ public class CollectionOrderMethod {
 		integers.add(-1);
 		System.out.println("Original set: " + integers);
 		// Collections.sort(integers); This throws error since sort method accepts list not collection
-		List list = new ArrayList(integers);
+		List<Integer> list = new ArrayList<>(integers);
 		Collections.sort(list);
 		System.out.println("Sorted set: " + list);
 		Collections.sort(list, Collections.reverseOrder());
@@ -71,7 +70,7 @@ public class CollectionOrderMethod {
 		integers.add(-1);
 		System.out.println("Original set: " + integers);
 		System.out.println("Sorted set: " + integers);
-		Set<Integer> reversedIntegers = new TreeSet(Collections.reverseOrder());
+		Set<Integer> reversedIntegers = new TreeSet<Integer>(Collections.reverseOrder());
 		reversedIntegers.add(5);
 		reversedIntegers.add(10);
 		reversedIntegers.add(0);
